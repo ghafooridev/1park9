@@ -1,0 +1,59 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.blurEffect {
+  -webkit-filter: blur(7px);
+  -o-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+}
+
+.content {
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+}
+
+.play,
+.pause {
+  font-size: 50px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 25px;
+}
+
+.play:hover,
+.pause:hover {
+  color: red;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px; */
+  width: 100%;
+  justify-content: start;
+  background-color: #77d099;
+  color: #011627;
+}
+.card p {
+  margin-bottom: 20px;
+}
+.card h4 {
+}
+.splide {
+  margin: 0 auto;
+}
+.splide__slide {
+  background-color: #fff;
+}

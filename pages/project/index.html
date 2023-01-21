@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <link rel="stylesheet" href="./project.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span class="content"></span>
+  </body>
+  <script>
+    const myTags = [
+      "Knix and Ashley Graham",
+      "Puma Hoops",
+      "Girlfriend Collective",
+      "Lyft Up",
+      "Knixteen",
+      "Knixteen",
+      "Nike & Uninterrupted",
+      "Diesel",
+      "Athena Club!",
+      "IMG x Mailchimp",
+    ];
+
+    const myImage = [
+      "https://picsum.photos/201",
+      "https://picsum.photos/202",
+      "https://picsum.photos/204",
+      "https://picsum.photos/205",
+      "https://picsum.photos/206",
+      "https://picsum.photos/207",
+      "https://picsum.photos/208",
+      "https://picsum.photos/209",
+      "https://picsum.photos/203",
+      "https://picsum.photos/210",
+    ];
+
+    var tagCloud = TagCloud(".content", myTags, {
+      // radius in px
+      radius: 500,
+
+      // animation speed
+      // slow, normal, fast
+      maxSpeed: "normal",
+      initSpeed: "normal",
+
+      // 0 = top
+      // 90 = left
+      // 135 = right-bottom
+      direction: 135,
+
+      // interact with cursor move on mouse out
+      keep: true,
+    });
+
+    //To change the color of text randomly
+
+    document.querySelector(".content").style.color = "#011627";
+
+    $(".tagcloud--item").click(function (e) {
+      console.log("xxxxxxx", $(this).text());
+    });
+
+    $(".tagcloud--item").mouseleave(function () {
+      tagCloud.resume();
+      $(
+        `#img-${$(this)
+          .text()
+          .replaceAll(" ", "")
+          .replace(/[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g, "")}`
+      ).remove();
+    });
+    $(".tagcloud--item").mouseover(function () {
+      const index = myTags.indexOf($(this).text());
+      var img = $("<img />", {
+        id: `img-${$(this)
+          .text()
+          .replaceAll(" ", "")
+          .replace(/[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g, "")}`,
+        src: myImage[index],
+      });
+
+      img.attr("style", $(this).attr("style"));
+      img.attr("width", 50);
+      img.attr("height", 50);
+      img.css("opacity", 1);
+      img.css("z-index", 0);
+      img.appendTo($(".tagcloud"));
+
+      tagCloud.pause();
+    });
+  </script>
+</html>
