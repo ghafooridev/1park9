@@ -1,7 +1,16 @@
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  background-color: #77D099
+}
+
 .banner {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
 }
 
@@ -10,6 +19,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -20,13 +30,15 @@
   font-weight: bolder;
   font-size: 24vw;
   text-align: center;
-  mix-blend-mode: screen;
-  background-color: #ffffff;
+  mix-blend-mode:screen;
+  background-color: #77D099;
+  /* background-color: #ffff; */
+
 }
 .color_back_first {
   position: absolute;
   z-index: 10;
-  top: 10px;
+  top:250px;
   left: 5%;
   margin: 0;
   font-weight: bolder;
@@ -36,8 +48,8 @@
 }
 .color_back_second {
   position: absolute;
-  top: 5px;
-  right: 3%;
+  top:250px;
+  right: 4%;
   margin: 0;
   font-weight: bolder;
   font-size: 24vw;
