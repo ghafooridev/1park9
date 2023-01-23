@@ -77,8 +77,8 @@ nav a:hover {
   font-size: 24vw;
   text-align: center;
   mix-blend-mode: screen;
-  background-color: #77d099;
-  /* background-color: #ffff; */
+  /* background-color: #77d099; */
+  background-color: #ffff;
 }
 .color_back_first {
   position: absolute;

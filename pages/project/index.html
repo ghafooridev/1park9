@@ -12,7 +12,7 @@
   <body>
     <nav>
       <a href="#">
-        <img src="/assets/1PARK9-black.png" alt="company_logo">
+        <img src="/assets/1PARK9-black.png" alt="company_logo" />
       </a>
 
       <div class="nav-links">
@@ -74,6 +74,7 @@
 
     $(".tagcloud--item").click(function (e) {
       console.log("xxxxxxx", $(this).text());
+      window.location.href = "../work/index.html";
     });
 
     $(".tagcloud--item").mouseleave(function () {
@@ -96,8 +97,8 @@
       });
 
       img.attr("style", $(this).attr("style"));
-      img.attr("width", 250);
-      img.attr("height", 250);
+      img.attr("width", 350);
+      img.attr("height", 350);
       img.css("opacity", 1);
       img.css("z-index", 0);
       img.appendTo($(".tagcloud"));
