@@ -1,10 +1,57 @@
-
 body {
+margin: 0;
+padding: 0;
+background-color: #77D099
+}
+
+nav {
+margin: 40px 45px;
+display: flex;
+justify-content:space-between ;
+}
+
+nav img {
+  width: 51px;
+  height: 41px;
+}
+
+.nav-links {
+  width: 312px;
+  
+  font-family: 'GT Zirkon Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color:#d2e823;
+
+  font-family: 'GT Zirkon Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 25px;
+  text-align: right;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  scale: 0.98;
+}
+
+
+.main-container {
   height: 100vh;
   display: flex;
   justify-items: center;
   align-items: center;
-  background-color: #77D099
 }
 
 .banner {
@@ -38,7 +85,7 @@ body {
 .color_back_first {
   position: absolute;
   z-index: 10;
-  top:250px;
+  top: 367px;
   left: 5%;
   margin: 0;
   font-weight: bolder;
@@ -48,7 +95,7 @@ body {
 }
 .color_back_second {
   position: absolute;
-  top:250px;
+  top: 367px;
   right: 4%;
   margin: 0;
   font-weight: bolder;
