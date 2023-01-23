@@ -10,6 +10,17 @@
     <title>Document</title>
   </head>
   <body>
+    <nav>
+      <a href="#">
+        <img src="/assets/1PARK9-black.png" alt="company_logo">
+      </a>
+
+      <div class="nav-links">
+        <a href="#">Work</a>
+        <a href="#">Our Collective</a>
+        <a href="#">About</a>
+      </div>
+    </nav>
     <span class="content"></span>
   </body>
   <script>
@@ -85,8 +96,8 @@
       });
 
       img.attr("style", $(this).attr("style"));
-      img.attr("width", 50);
-      img.attr("height", 50);
+      img.attr("width", 250);
+      img.attr("height", 250);
       img.css("opacity", 1);
       img.css("z-index", 0);
       img.appendTo($(".tagcloud"));
