@@ -74,7 +74,10 @@
 
     $(".tagcloud--item").click(function (e) {
       console.log("xxxxxxx", $(this).text());
-      window.location.href = "../work/index.html";
+
+      const companyName = e.target.textContent.replaceAll(" ", "");
+
+      window.location.href = `../work/${companyName}/index.html`;
     });
 
     $(".tagcloud--item").mouseleave(function () {

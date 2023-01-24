@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/splide.min.css" />
+    <link rel="stylesheet" href="./work.css" />
+    <script type="text/javascript" src="../../assets/js/splide.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="#">
+        <img src="/assets/1PARK9.png" alt="company_logo" />
+      </a>
+
+      <div class="nav-links">
+        <a href="#">Work</a>
+        <a href="#">Our Collective</a>
+        <a href="#">About</a>
+        <a href="#">Diesel</a>
+      </div>
+    </nav>
+
+    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="card">
+              <p>Puma Hoops</p>
+              <h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+                ipsum nunc yetpy sot. Maecenas nec nulla quis ipsum congue los
+                euismod. Nulla sed tortor et ipsum bebier scelerisque iaculis in
+                in eros. Mauris sit amet gravida orci, vitae euismod lacus.
+              </h4>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+            <img src="https://picsum.photos/201" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="https://picsum.photos/200" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="https://picsum.photos/202" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <div class="wrapper">
+              <video class="video">
+                <source
+                  src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                  type="video/mp4"
+                />
+                <source src=http://techslides.com/demos/sample-videos/small.webm
+                type=video/webm> <source
+                src=http://techslides.com/demos/sample-videos/small.ogv
+                type=video/ogg> <source
+                src=http://techslides.com/demos/sample-videos/small.3gp
+                type=video/3gp>
+              </video>
+
+              <div class="content">
+                <div class="play">►</div>
+                <div class="pause">||</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+  <script>
+    const splide = new Splide(".splide", {
+      type: "loop",
+      perPage: 1,
+      autoplay: false,
+    });
+    splide.on("moved", function () {
+      $(".pause").click();
+    });
+    splide.mount();
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".pause").hide();
+      $(".play").click(function () {
+        if ($(this).parent().prev().get(0).paused) {
+          $(this).parent().prev().get(0).play();
+
+          $(".play").hide();
+        }
+      });
+      $(".pause").click(function () {
+        $(this).parent().prev().get(0).pause();
+        $(".pause").hide();
+        $(".play").show();
+      });
+      $(".video").mouseleave(function () {
+        $(".pause").hide();
+      });
+      $(".video").mouseover(function () {
+        if ($(".play").is(":visible")) {
+          $(".pause").hide();
+        } else {
+          $(".pause").show();
+        }
+      });
+      $(".video").on("ended", function () {
+        $(this).addClass("blurEffect");
+        $(".content").show();
+        $(".pause").hide();
+      });
+      $(".content").mouseover(function () {
+        if ($(".play").is(":visible")) {
+          $(".pause").hide();
+        } else {
+          $(".pause").show();
+        }
+      });
+      $(".content").on("ended", function () {
+        $(this).addClass("blurEffect");
+        $(".content").show();
+        $(".pause").hide();
+      });
+    });
+  </script>
+</html>
