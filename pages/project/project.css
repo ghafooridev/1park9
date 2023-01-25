@@ -60,3 +60,8 @@ nav a:hover {
   color: #77d099;
   cursor: pointer;
 }
+
+#img-oinurolllective {
+  visibility: hidden;
+  border: none;
+}

@@ -30,7 +30,7 @@
       "Gladmir Gelin",
       "Fred Daniels",
       "Matt Ellis",
-      "Join Our Colllective",
+      "Join Our Collective",
     ];
 
     const myImage = [
@@ -81,23 +81,25 @@
       ).remove();
     });
     $(".tagcloud--item").mouseover(function () {
-      const index = myTags.indexOf($(this).text());
-      var img = $("<img />", {
-        id: `img-${$(this)
-          .text()
-          .replaceAll(" ", "")
-          .replace(/[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g, "")}`,
-        src: myImage[index],
-      });
+      if ($(this).text() !== "Join Our Collective") {
+        const index = myTags.indexOf($(this).text());
+        var img = $("<img />", {
+          id: `img-${$(this)
+            .text()
+            .replaceAll(" ", "")
+            .replace(/[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g, "")}`,
+          src: myImage[index],
+        });
 
-      img.attr("style", $(this).attr("style"));
-      img.attr("width", 350);
-      img.attr("height", 350);
-      img.css("opacity", 1);
-      img.css("z-index", 0);
-      img.appendTo($(".tagcloud"));
+        img.attr("style", $(this).attr("style"));
+        img.attr("width", 350);
+        img.attr("height", 350);
+        img.css("opacity", 1);
+        img.css("z-index", 0);
+        img.appendTo($(".tagcloud"));
 
-      tagCloud.pause();
+        tagCloud.pause();
+      }
     });
   </script>
 </html>
