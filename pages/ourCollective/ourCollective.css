@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #d2e823;
+  background-color: #011627;
 }
 
 nav {
@@ -32,7 +32,7 @@ nav img {
 
 .nav-links a {
   text-decoration: none;
-  color: #011627;
+  color: #d2e823;
 
   font-family: "GT Zirkon Trial";
   font-style: normal;
@@ -57,11 +57,6 @@ nav a:hover {
   font-family: "GT Zirkon Trial";
 }
 .tagcloud--item:hover {
-  color: #77d099;
+  color: #d2e823;
   cursor: pointer;
-}
-
-#img-oinurolllective {
-  visibility: hidden;
-  border: none;
 }

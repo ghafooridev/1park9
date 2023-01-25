@@ -48,6 +48,7 @@ nav a:hover {
 
 .main-container {
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -56,8 +57,12 @@ nav a:hover {
 .banner {
   position: relative;
   width: 100%;
-  height: 50vh;
+  min-width: 1638px;
+  height: 631px;
   overflow: hidden;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 243px;
 }
 
 .banner video {
@@ -77,13 +82,13 @@ nav a:hover {
   font-size: 24vw;
   text-align: center;
   mix-blend-mode: screen;
-  /* background-color: #77d099; */
-  background-color: #ffff;
+  background-color: #77d099;
+  /* background-color: #ffff; */
 }
 .color_back_first {
   position: absolute;
   z-index: 10;
-  top: 367px;
+  top: 25%;
   left: 5%;
   margin: 0;
   font-weight: bolder;
@@ -93,7 +98,7 @@ nav a:hover {
 }
 .color_back_second {
   position: absolute;
-  top: 367px;
+  top: 25%;
   right: 4%;
   margin: 0;
   font-weight: bolder;

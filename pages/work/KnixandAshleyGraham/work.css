@@ -91,11 +91,8 @@ nav a:hover {
   /* padding: 20px; */
   max-width: 100%;
   max-height: 100%;
-  width: 1365px;
-  height: 791px;
-  left: 182px;
-  top: 162px;
-  margin: 122px 181px 164px 182px;
+  width: 80%;
+  margin: 122px auto;
   border-radius: 10px;
   justify-content: start;
   background-color: #77d099;
@@ -121,13 +118,18 @@ nav a:hover {
 }
 .card h4 {
   margin: 32px 137px 50px 50px;
-  font-size: 65px;
+  font-size: 4em;
   line-height: 72px;
   font-weight: 400;
 
   font-family: "GT Zirkon Trial";
   font-style: normal;
   color: #011627;
+  padding-bottom: 14.4%;
+}
+
+.card-picture {
+  height: 791px;
 }
 
 .splide {
@@ -152,15 +154,29 @@ nav a:hover {
 }
 
 .splide__arrow--next {
-  margin-right: 140px;
+  margin-right: 7.5%;
 }
 
 .splide__arrow--prev {
-  margin-left: 140px;
+  margin-left: 7.5%;
 }
 
 li {
   height: 1072px;
+}
+
+li img {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #011627;
+  border: none;
+}
+
+li video {
+  height: 100%;
+  background-color: #011627;
+  border-radius: 10px;
+  border: none;
 }
 
 .splide__pagination--ltr {
