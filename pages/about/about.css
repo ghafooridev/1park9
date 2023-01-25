@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #011627;
+}
+
+nav {
+  margin: 40px 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 51px;
+  height: 41px;
+}
+
+.nav-links {
+  width: 312px;
+
+  font-family: "GT Zirkon Trial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #d2e823;
+
+  font-family: "GT Zirkon Trial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 25px;
+  text-align: right;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  scale: 0.98;
+}
+
+main {
+  height: 1361px;
+  min-height: 100%;
+
+  width: 558px;
+  min-width: 100%;
+
+  padding-top: 189px;
+  padding-left: 45px;
+  padding-right: 322px;
+}
+
+.about-p {
+  font-family: "GT Zirkon Trial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 120%;
+
+  color: #77d099;
+}

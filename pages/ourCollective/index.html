@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <link rel="stylesheet" href="./ourCollective.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <a href="../logo/index.html">
+        <img src="/assets/1PARK9.png" alt="company_logo" />
+      </a>
+
+      <div class="nav-links">
+        <a href="../project/index.html">Work</a>
+        <a href="#">Our Collective</a>
+        <a href="#">About</a>
+      </div>
+    </nav>
+    <span class="content"></span>
+  </body>
+  <script>
+    const myTags = [
+      "Dana Scruggs",
+      "Okema Moore",
+      "Gladmir Gelin",
+      "Fred Daniels",
+      "Matt Ellis",
+      "Join Our Colllective",
+    ];
+
+    const myImage = [
+      "https://picsum.photos/201",
+      "https://picsum.photos/202",
+      "https://picsum.photos/204",
+      "https://picsum.photos/205",
+      "https://picsum.photos/206",
+    ];
+
+    var tagCloud = TagCloud(".content", myTags, {
+      // radius in px
+      radius: 500,
+
+      // animation speed
+      // slow, normal, fast
+      maxSpeed: "normal",
+      initSpeed: "normal",
+
+      // 0 = top
+      // 90 = left
+      // 135 = right-bottom
+      direction: 135,
+
+      // interact with cursor move on mouse out
+      keep: true,
+    });
+
+    //To change the color of text randomly
+
+    document.querySelector(".content").style.color = "#77d099";
+
+    $(".tagcloud--item").click(function (e) {
+      console.log("xxxxxxx", $(this).text());
+
+      //   const companyName = e.target.textContent.replaceAll(" ", "");
+
+      //   window.location.href = `../work/${companyName}/index.html`;
+    });
+
+    $(".tagcloud--item").mouseleave(function () {
+      tagCloud.resume();
+      $(
+        `#img-${$(this)
+          .text()
+          .replaceAll(" ", "")
+          .replace(/[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g, "")}`
+      ).remove();
+    });
+    $(".tagcloud--item").mouseover(function () {
+      const index = myTags.indexOf($(this).text());
+      var img = $("<img />", {
+        id: `img-${$(this)
+          .text()
+          .replaceAll(" ", "")
+          .replace(/[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g, "")}`,
+        src: myImage[index],
+      });
+
+      img.attr("style", $(this).attr("style"));
+      img.attr("width", 350);
+      img.attr("height", 350);
+      img.css("opacity", 1);
+      img.css("z-index", 0);
+      img.appendTo($(".tagcloud"));
+
+      tagCloud.pause();
+    });
+  </script>
+</html>
