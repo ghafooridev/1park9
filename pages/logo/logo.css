@@ -88,7 +88,7 @@ nav a:hover {
 .color_back_first {
   position: absolute;
   z-index: 10;
-  top: 246px;
+  top: 25%;
   left: 5%;
   margin: 0;
   font-weight: bolder;
@@ -98,7 +98,7 @@ nav a:hover {
 }
 .color_back_second {
   position: absolute;
-  top: 246px;
+  top: 25%;
   right: 4%;
   margin: 0;
   font-weight: bolder;
