@@ -39,7 +39,7 @@
           </li>
 
           <li class="splide__slide">
-            <img src="https://picsum.photos/201" style="width: 100%" alt="" />
+            <img src="https://picsum.photos/201" alt="" />
           </li>
           <li class="splide__slide">
             <img src="https://picsum.photos/200" style="width: 100%" alt="" />
@@ -77,6 +77,8 @@
       type: "loop",
       perPage: 1,
       autoplay: false,
+      wheel: true,
+      padding: "160px",
     });
     splide.on("moved", function () {
       $(".pause").click();

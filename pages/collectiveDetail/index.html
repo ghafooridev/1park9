@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collective Detail</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="collectiveDetailContent"></div>
+  </body>
+  <script>
+    const text =
+      `A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence`.trim();
+
+    const indexes2 = [];
+    var imagePlace = [];
+
+    for (let index = 0; index < text.length; index++) {
+      if (text[index] === " ") {
+        indexes2.push(index);
+      }
+    }
+
+    while (imagePlace.length < 3) {
+      var rand = indexes2[(Math.random() * indexes2.length) | 0];
+      if (!imagePlace.includes(rand)) imagePlace.push(rand);
+    }
+
+    const img1 = ` <span class="imageSpan"
+        > <img src="https://picsum.photos/201" alt=""
+      /> </span> `;
+    const img2 = ` <span class="imageSpan"
+        > <img src="https://picsum.photos/202" alt=""
+      /> </span> `;
+    const img3 = ` <span class="imageSpan"
+        > <img src="https://picsum.photos/203" alt=""
+      /> </span> `;
+
+    imagePlace = imagePlace.sort(function (a, b) {
+      return a - b;
+    });
+    const first = text.substring(0, imagePlace[0]);
+    const second = text.substring(imagePlace[0] + 1, imagePlace[1]);
+    const third = text.substring(imagePlace[1] + 1, imagePlace[2]);
+    const forth = text.substring(imagePlace[2] + 1, text.length);
+    const finalText = first + img1 + second + img2 + third + img3 + forth;
+
+    $(".collectiveDetailContent").html("");
+    $(".collectiveDetailContent").append(finalText);
+  </script>
+  <style>
+    body {
+      background: yellow;
+    }
+    div {
+      font-size: 48px;
+    }
+    .imageSpan {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      vertical-align: middle;
+      margin: 2px;
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+</html>
