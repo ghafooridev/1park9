@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collective Detail</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <div class="content">
+      <div class="collectiveDetailContent"></div>
+      <div class="collectiveDescription">
+        <p>
+          Alima Lee is a transdisciplinary artist of afrodiasporic origin both
+          from and currently based in New York City. Their work explores themes
+          of identity and intersectionality. They are a recent Frieze LA x
+          Ghetto Film School Fellow and Co-Host of the radio show "Rave
+          Reparations" on NTS. Working in an uninhibited range of mediums from
+          video installation and photography to printmaking and sculpture, Alima
+          is on an ever-constant freefall from structure. Their video work is
+          currently on view at HVW8 Gallery in Berlin and has been presented at
+          the Tate Modern, MOCA, Smithsonian African American Museum, Gavin
+          Brown's Enterprise, and ICA Boston, among other global entities.
+        </p>
+
+        <span
+          class="imageRandom"
+          style="top: 10px; left: 70%; width: 300px; height: 500px"
+        >
+          <img src="https://dummyimage.com/200.png/f00/fff" alt="" />
+          <h1 class="hide">text</h1>
+        </span>
+        <span
+          class="imageRandom"
+          style="top: 600px; left: 60%; width: 400px; height: 300px"
+        >
+          <img src="https://dummyimage.com/400.png/0f0/fff" alt="" />
+          <h1 class="hide">text</h1>
+        </span>
+        <span
+          class="imageRandom"
+          style="top: 1100px; left: 0; width: 500px; height: 200px"
+        >
+          <img src="https://dummyimage.com/500.png/00f/fff" alt="" />
+          <h1 class="hide">text</h1>
+        </span>
+
+        <span
+          class="imageRandom"
+          style="top: 950px; left: 60%; width: 400px; height: 300px"
+        >
+          <img src="https://dummyimage.com/600.png/f0f/fff" alt="" />
+          <h1 class="hide">text</h1>
+        </span>
+        <span
+          class="imageRandom"
+          style="top: 1350px; left: 30%; width: 400px; height: 200px"
+        >
+          <img src="https://dummyimage.com/300.png/09f/fff" alt="" />
+          <h1 class="hide">text</h1>
+        </span>
+        <img
+          alt=""
+          src="../../assets/img/logo.png"
+          style="
+            position: absolute;
+            top: 1600px;
+            left: 0;
+            right: 0;
+            width: 100%;
+          "
+        />
+      </div>
+    </div>
+  </body>
+  <script>
+    const text = `Matt Ellis is a New York based
+             street photographer with a passion for documenting people and their intimate stories.`.trim();
+
+    const indexes2 = [];
+    var imagePlace = [];
+
+    for (let index = 0; index < text.length; index++) {
+      if (text[index] === " ") {
+        indexes2.push(index);
+      }
+    }
+
+    while (imagePlace.length < 3) {
+      var rand = indexes2[(Math.random() * indexes2.length) | 0];
+      if (!imagePlace.includes(rand)) imagePlace.push(rand);
+    }
+
+    const img1 = ` <span class="imageSpan"
+          > <img src="https://dummyimage.com/300.png/09f/fff" alt=""
+        /> </span> `;
+    const img2 = ` <span class="imageSpan"
+          > <img src="https://dummyimage.com/300.png/09f/fff" alt=""
+        /> </span> `;
+    const img3 = ` <span class="imageSpan"
+          > <img src="https://dummyimage.com/300.png/09f/fff" alt=""
+        /> </span> `;
+
+    imagePlace = imagePlace.sort(function (a, b) {
+      return a - b;
+    });
+    const first = text.substring(0, imagePlace[0]);
+    const second = text.substring(imagePlace[0] + 1, imagePlace[1]);
+    const third = text.substring(imagePlace[1] + 1, imagePlace[2]);
+    const forth = text.substring(imagePlace[2] + 1, text.length);
+    const finalText = first + img1 + second + img2 + third + img3 + forth;
+
+    $(".collectiveDetailContent").html("");
+    $(".collectiveDetailContent").append(finalText);
+
+    $(".imageRandom").mouseenter(function () {
+      $(this).find("h1").removeClass("hide");
+      $(this).find("h1").addClass("show");
+    });
+
+    $(".imageRandom").mouseleave(function () {
+      $(this).find("h1").removeClass("show");
+      $(this).find("h1").addClass("hide");
+    });
+
+    $(".imageRandom").click(function () {
+      $("#overlay").toggleClass("show");
+      $(this).find("img").toggleClass("zoom show");
+      // document.getElementById("overlay").style.display = "block";
+      // if ($(".imageRandom").find(".zoom").length == 0) {
+      //   console.log("fffffffffffff", $(this).find(".zoom").length);
+      //   $(this).find("img").addClass("zoom show");
+      // }
+    });
+    // $(".imageRandom")
+    //   .find("img")
+    //   .click(function () {
+    //     $("#overlay").addClass("hide");
+    //     console.log($(".imageRandom").find(".zoom").length);
+    //     if ($(".imageRandom").find(".zoom").length > 0) {
+    //       $(".imageRandom").find("img").removeClass("zoom");
+    //       // var element = document.getElementsByClassName("zoom")[0];
+    //       // element.classList.remove("zoom");
+    //     }
+    //   });
+
+    // function off() {
+    //   document.getElementById("overlay").style.display = "none";
+    // }
+
+    // function getRandomNumber(min, max) {
+    //   return Math.random() * (max - min) + min;
+    // }
+
+    // const images=[`<span class="imageSpan"
+    //         > <img src="https://picsum.photos/201" alt=""
+    //       /> </span>`,`<span class="imageSpan"
+    //         > <img src="https://picsum.photos/201" alt=""
+    //       /> </span>`,`<span class="imageSpan"
+    //         > <img src="https://picsum.photos/201" alt=""
+    //       /> </span>`,`<span class="imageSpan"
+    //         > <img src="https://picsum.photos/201" alt=""
+    //       /> </span>`,`<span class="imageSpan"
+    //         > <img src="https://picsum.photos/201" alt=""
+    //       /> </span>`]
+
+    // const images = [
+    //   "https://picsum.photos/201",
+    //   "https://picsum.photos/202",
+    //   "https://picsum.photos/203",
+    //   "https://picsum.photos/204",
+    //   "https://picsum.photos/205",
+    // ];
+    // // var images=$(".collectiveDescription").find('span')
+
+    // console.log(images);
+    // var winWidth = window.innerWidth;
+    // var winHeight = window.innerHeight;
+
+    // // i stands for "index". you could also call this banana or haircut. it's a variable
+    // for (var i = 0; i < images.length; i++) {
+    //   // shortcut! the current div in the list
+    //   var thisImg = images[i];
+
+    //   const imageBlock = `<span class="imageSpan"
+    //         > <img src="${images[i]}" alt=""
+    //       /> </span>`;
+    //   // get random numbers for each element
+    //   randomTop = getRandomNumber(0, winHeight);
+    //   randomLeft = getRandomNumber(0, winWidth);
+    //   console.log(randomLeft);
+    //   $(imageBlock)
+    //     // .find("span")
+    //     .css({
+    //       border: "1px solid red",
+    //       position: "absolute",
+    //       top: `${randomTop}px`,
+    //       left: `${randomLeft}px`,
+    //     });
+    //   // update top and left position
+    //   // thisImg.style.top = randomTop + "px";
+    //   // thisImg.style.left = randomLeft + "px";
+
+    //   $(imageBlock).appendTo(".collectiveDescription");
+    // }
+
+    // // function that returns a random number between a min and max
+
+    // // images.map(function(item){
+    // //  const imageBlock=`<span class="imageSpan"
+    // //         > <img src="${item}" alt="" style="position:absolute;top:${getRandom()}"
+    // //       /> </span>`
+    // // })
+  </script>
+
+  <!-- <script>
+    // collect all the divs
+    var divs = document.getElementsByClassName("imageRandom");
+    // get window width and height
+    var winWidth = 500;
+    var winHeight = 700;
+
+    // i stands for "index". you could also call this banana or haircut. it's a variable
+    for (var i = 0; i < divs.length; i++) {
+      // shortcut! the current div in the list
+      var thisDiv = divs[i];
+
+      // get random numbers for each element
+      randomTop = getRandomNumber(0, winHeight);
+      randomLeft = getRandomNumber(0, winWidth);
+
+      // update top and left position
+      thisDiv.style.top = randomTop + "px";
+      thisDiv.style.left = randomLeft + "px";
+    }
+
+    // function that returns a random number between a min and max
+    function getRandomNumber(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+  </script> -->
+
+  <style>
+    #overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      cursor: pointer;
+    }
+    .zoom {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1000;
+      transform: scale(2);
+    }
+    body {
+      background: yellow;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .collectiveDetailContent {
+      font-size: 130px;
+      line-height: 144px;
+      font-weight: 400;
+    }
+
+    .collectiveDetailContent img {
+      /* width: 100%; */
+    }
+    .imageSpan {
+      display: inline-block;
+      /* width: 100px;
+      height: 100px; */
+      vertical-align: middle;
+      margin: 2px;
+      padding: 2px;
+      background-color: blue;
+    }
+    .collectiveDescription {
+      position: relative;
+    }
+    .collectiveDescription p {
+      width: 50%;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      font-size: 45px;
+      line-height: 52px;
+      font-weight: 400;
+    }
+    .collectiveDescription h1 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .imageRandom {
+      position: absolute;
+      cursor: pointer;
+      transition: all 1s;
+      /* position: absolute;
+      top: 100px;
+      left: 100px; */
+    }
+    .imageRandom .icon {
+      position: absolute;
+      cursor: pointer;
+      display: none;
+      top: 10px;
+      right: 10px;
+    }
+    .imageRandom img {
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+    }
+    .hide {
+      display: none !important;
+    }
+    .show {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</html>

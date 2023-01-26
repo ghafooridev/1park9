@@ -50,6 +50,11 @@ nav a:hover {
   position: relative;
   display: inline-block;
 }
+.wrapper video {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
 
 .blurEffect {
   -webkit-filter: blur(7px);
@@ -86,48 +91,15 @@ nav a:hover {
   color: red;
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  /* padding: 20px; */
-  max-width: 100%;
-  max-height: 100%;
-  width: 1365px;
-  height: 791px;
-  left: 182px;
-  top: 162px;
-  margin: 122px 181px 164px 182px;
-  border-radius: 10px;
-  justify-content: start;
   background-color: #77d099;
   color: #011627;
+  padding: 30px;
 }
 .card p {
-  margin: 50px 50px;
-  margin-bottom: 0;
-
-  width: 496px;
-  height: 25px;
-
-  font-family: "GT Zirkon Trial";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 33px;
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.05em;
-
-  color: #011627;
+  font-size: 20px;
 }
 .card h4 {
-  margin: 32px 137px 50px 50px;
-  font-size: 65px;
-  line-height: 72px;
-  font-weight: 400;
-
-  font-family: "GT Zirkon Trial";
-  font-style: normal;
-  color: #011627;
+  font-size: 40px;
 }
 
 .splide {
@@ -137,18 +109,28 @@ nav a:hover {
 }
 .splide__slide {
   background-color: #011627;
+  display: flex;
+  padding: 100px 30px;
+}
+.splide__slide img,
+.splide__slide .wrapper,
+.splide__slide .card {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .splide__arrow {
   height: 62px;
   width: 62px;
   background-color: #011627;
+  opacity: 1;
 }
 
 .splide__arrow svg {
   background-color: #77d099;
   border-radius: 50%;
   width: 20px;
+  padding: 5px;
 }
 
 .splide__arrow--next {
@@ -165,4 +147,8 @@ li {
 
 .splide__pagination--ltr {
   visibility: hidden;
+}
+
+.imageSlider {
+  display: flex;
 }
