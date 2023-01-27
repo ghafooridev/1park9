@@ -41,6 +41,7 @@
           class="imageRandom"
           style="top: 10px; left: 70%; width: 300px; height: 500px"
         >
+
           <img src="../../assets/ourCollectiveDetails4.png" alt="4" />
           <h1 class="hide">text</h1>
         </span>
@@ -48,13 +49,16 @@
           class="imageRandom"
           style="top: 600px; left: 60%; width: 400px; height: 300px"
         >
+
           <img src="../../assets/ourCollectiveDetails5.png" alt="5" />
           <h1 class="hide">text</h1>
+
         </span>
         <span
           class="imageRandom"
           style="top: 1100px; left: 0; width: 500px; height: 200px"
         >
+
           <img src="../../assets/ourCollectiveDetails6.png" alt="6" />
           <h1 class="hide">text</h1>
         </span>
@@ -70,6 +74,7 @@
           class="imageRandom"
           style="top: 1350px; left: 30%; width: 400px; height: 200px"
         >
+
           <img src="../../assets/ourCollectiveDetails8.png" alt="" />
           <h1 class="hide">text</h1>
         </span>
@@ -137,10 +142,32 @@
       $(this).find("h1").addClass("hide");
     });
 
-    $(".imageRandom").click(function () {
+    $(".imageRandom").click(function (e) {
       $("#overlay").toggleClass("show");
-      $(this).find("img").toggleClass("zoom show");
+      $(this).toggleClass("zoom show");
+
+      var element = document.getElementById($(this).find("h1").attr("id"));
+
+      if (!$(this).hasClass("zoom")) {
+        window.scroll({
+          top: getOffset(element).top,
+          behavior: "smooth",
+        });
+      } else {
+        console.log($(this).hasClass("zoom"));
+        window.scroll({ top: 0, behavior: "smooth" });
+      }
+      // var element = document.getElementById($(this).find("h1").attr("id"));
+      // window.scroll({ top: 100, behavior: "smooth" });
     });
+
+    function getOffset(el) {
+      const rect = el.getBoundingClientRect();
+      return {
+        left: rect.left + window.scrollX,
+        top: rect.top + window.scrollY,
+      };
+    }
   </script>
 
   <style>
@@ -200,16 +227,16 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.9);
       z-index: 2;
       cursor: pointer;
     }
     .zoom {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 50% !important;
+      left: 55% !important;
       z-index: 1000;
-      transform: scale(2);
+      transform: scale(1.4) translate(-50%, -50%);
     }
     body {
       background: yellow;
