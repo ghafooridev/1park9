@@ -59,20 +59,17 @@
       keep: true,
     });
 
-    //To change the color of text randomly
-
+    tagCloud.pause();
     document.querySelector(".content").style.color = "#77d099";
 
     $(".tagcloud--item").click(function (e) {
-      console.log("xxxxxxx", $(this).text());
+      const companyName = e.target.textContent.replaceAll(" ", "");
 
-      //   const companyName = e.target.textContent.replaceAll(" ", "");
-
-      //   window.location.href = `../work/${companyName}/index.html`;
+      window.location.href = `../work/${companyName}/index.html`;
     });
 
     $(".tagcloud--item").mouseleave(function () {
-      tagCloud.resume();
+      // tagCloud.resume();
       $(
         `#img-${$(this)
           .text()
@@ -98,7 +95,7 @@
         img.css("z-index", 0);
         img.appendTo($(".tagcloud"));
 
-        tagCloud.pause();
+        // tagCloud.pause();
       }
     });
   </script>

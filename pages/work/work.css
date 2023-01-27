@@ -1,7 +1,13 @@
 body {
   margin: 0;
+  margin-bottom: 100px;
   padding: 0;
   background-color: #011627;
+}
+
+body a {
+  text-decoration: none;
+  color: #77d099;
 }
 
 nav {
@@ -102,6 +108,26 @@ nav a:hover {
   font-size: 40px;
 }
 
+.last-card {
+  padding: 0 45px;
+  background: #011627;
+  color: #77d099;
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-card-left {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-card-right {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .splide {
   margin: 0 auto;
   max-height: 100%;
@@ -111,6 +137,7 @@ nav a:hover {
   background-color: #011627;
   display: flex;
   padding: 100px 30px;
+  padding-bottom: 0;
 }
 .splide__slide img,
 .splide__slide .wrapper,
@@ -133,6 +160,10 @@ nav a:hover {
   padding: 5px;
 }
 
+video {
+  object-fit: cover;
+}
+
 .splide__arrow--next {
   margin-right: 140px;
 }
@@ -142,7 +173,7 @@ nav a:hover {
 }
 
 li {
-  height: 1072px;
+  height: 791px;
 }
 
 .splide__pagination--ltr {
@@ -151,4 +182,20 @@ li {
 
 .imageSlider {
   display: flex;
+}
+
+.splide__arrow:disabled {
+  visibility: hidden;
+}
+
+.project-buttons {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

@@ -1,7 +1,13 @@
 body {
   margin: 0;
+  margin-bottom: 100px;
   padding: 0;
   background-color: #011627;
+}
+
+body a {
+  text-decoration: none;
+  color: #77d099;
 }
 
 nav {
@@ -50,6 +56,11 @@ nav a:hover {
   position: relative;
   display: inline-block;
 }
+.wrapper video {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
 
 .blurEffect {
   -webkit-filter: blur(7px);
@@ -86,50 +97,35 @@ nav a:hover {
   color: red;
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  /* padding: 20px; */
-  max-width: 100%;
-  max-height: 100%;
-  width: 80%;
-  margin: 122px auto;
-  border-radius: 10px;
-  justify-content: start;
   background-color: #77d099;
   color: #011627;
+  padding: 30px;
 }
 .card p {
-  margin: 50px 50px;
-  margin-bottom: 0;
-
-  width: 496px;
-  height: 25px;
-
-  font-family: "GT Zirkon Trial";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 33px;
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.05em;
-
-  color: #011627;
+  font-size: 20px;
 }
 .card h4 {
-  margin: 32px 137px 50px 50px;
-  font-size: 4em;
-  line-height: 72px;
-  font-weight: 400;
-
-  font-family: "GT Zirkon Trial";
-  font-style: normal;
-  color: #011627;
-  padding-bottom: 14.4%;
+  font-size: 40px;
 }
 
-.card-picture {
-  height: 791px;
+.last-card {
+  padding: 0 45px;
+  background: #011627;
+  color: #77d099;
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-card-left {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.last-card-right {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .splide {
@@ -139,46 +135,67 @@ nav a:hover {
 }
 .splide__slide {
   background-color: #011627;
+  display: flex;
+  padding: 100px 30px;
+  padding-bottom: 0;
+}
+.splide__slide img,
+.splide__slide .wrapper,
+.splide__slide .card {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .splide__arrow {
   height: 62px;
   width: 62px;
   background-color: #011627;
+  opacity: 1;
 }
 
 .splide__arrow svg {
   background-color: #77d099;
   border-radius: 50%;
   width: 20px;
+  padding: 5px;
+}
+
+video {
+  object-fit: cover;
 }
 
 .splide__arrow--next {
-  margin-right: 7.5%;
+  margin-right: 140px;
 }
 
 .splide__arrow--prev {
-  margin-left: 7.5%;
+  margin-left: 140px;
 }
 
 li {
-  height: 1072px;
-}
-
-li img {
-  height: 100%;
-  border-radius: 10px;
-  background-color: #011627;
-  border: none;
-}
-
-li video {
-  height: 100%;
-  background-color: #011627;
-  border-radius: 10px;
-  border: none;
+  height: 791px;
 }
 
 .splide__pagination--ltr {
   visibility: hidden;
+}
+
+.imageSlider {
+  display: flex;
+}
+
+.splide__arrow:disabled {
+  visibility: hidden;
+}
+
+.project-buttons {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

@@ -71,15 +71,101 @@
               </div>
             </div>
           </li>
+          <li class="splide__slide">
+            <img src="https://picsum.photos/202" alt="" />
+          </li>
+          <li class="splide__slide">
+            <div class="card last-card">
+              <div class="last-card-left">
+                <div>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                </div>
+
+                <div>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                </div>
+              </div>
+
+              <div class="last-card-right">
+                <div>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p style="visibility: hidden">Founder & President</p>
+                  <p style="visibility: hidden">Founder & President</p>
+                  <p>Founder & President</p>
+                  <p style="visibility: hidden">Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                  <p>Founder & President</p>
+                </div>
+
+                <div>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                  <p>Tahira White</p>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
+      </div>
+
+      <div class="button-wrapper">
+        <div class="project-buttons">
+          <p>
+            <a href="#">Previous project</a>
+          </p>
+          <p>
+            <a href="#">Next project</a>
+          </p>
+        </div>
       </div>
     </section>
   </body>
   <script>
     const splide = new Splide(".splide", {
-      type: "loop",
+      rewind: false,
       perPage: 1,
       autoplay: false,
+      wheel: true,
+      padding: "160px",
+      width: "80%",
+      focus: 0,
+      omitEnd: true,
+      wheelSleep: 250,
     });
     splide.on("moved", function () {
       $(".pause").click();
@@ -130,4 +216,6 @@
       });
     });
   </script>
+
+  <script></script>
 </html>
