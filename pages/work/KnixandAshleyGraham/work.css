@@ -138,8 +138,9 @@ nav a:hover {
   display: flex;
   padding: 100px 30px;
   padding-bottom: 0;
+  justify-content: center;
 }
-.splide__slide img,
+
 .splide__slide .wrapper,
 .splide__slide .card {
   width: 100%;
