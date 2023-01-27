@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/splide.min.css" />
+    <link rel="stylesheet" href="./work.css" />
+    <script
+      type="text/javascript"
+      src="../../../assets/js/splide.min.js"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <a href="../../logo/index.html">
+        <img src="/assets/1PARK9.png" alt="company_logo" />
+      </a>
+
+      <div class="nav-links">
+        <a href="../../project/index.html">Work</a>
+        <a href="../../ourCollective/index.html">Our Collective</a>
+        <a href="../../about/index.html">About</a>
+      </div>
+    </nav>
+
+    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="card">
+              <p>Puma Hoops</p>
+              <h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
+                ipsum nunc yetpy sot. Maecenas nec nulla quis ipsum congue los
+                euismod. Nulla sed tortor et ipsum bebier scelerisque iaculis in
+                in eros. Mauris sit amet gravida orci, vitae euismod lacus.
+              </h4>
+            </div>
+          </li>
+
+          <li class="splide__slide">
+            <img src="../../../assets/puma1.png" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="../../../assets/puma2.png" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="../../../assets/puma3.png" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="../../../assets/puma4.png" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="../../../assets/puma5.png" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="../../../assets/puma6.png" style="width: 100%" alt="" />
+          </li>
+          <li class="splide__slide">
+            <img src="../../../assets/puma7.png" style="width: 100%" alt="" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-wrapper">
+        <div class="project-buttons">
+          <p>
+            <a href="../Diesel/index.html">Previous project</a>
+          </p>
+          <p>
+            <a href="../KnixandAshleyGraham/index.html">Next project</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const splide = new Splide(".splide", {
+      rewind: false,
+      perPage: 1,
+      autoplay: false,
+      wheel: true,
+      padding: "160px",
+      width: "80%",
+      focus: 0,
+      omitEnd: true,
+      wheelSleep: 250,
+    });
+    splide.on("moved", function () {
+      $(".pause").click();
+    });
+    splide.mount();
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".pause").hide();
+      $(".play").click(function () {
+        if ($(this).parent().prev().get(0).paused) {
+          $(this).parent().prev().get(0).play();
+
+          $(".play").hide();
+        }
+      });
+      $(".pause").click(function () {
+        $(this).parent().prev().get(0).pause();
+        $(".pause").hide();
+        $(".play").show();
+      });
+      $(".video").mouseleave(function () {
+        $(".pause").hide();
+      });
+      $(".video").mouseover(function () {
+        if ($(".play").is(":visible")) {
+          $(".pause").hide();
+        } else {
+          $(".pause").show();
+        }
+      });
+      $(".video").on("ended", function () {
+        $(this).addClass("blurEffect");
+        $(".content").show();
+        $(".pause").hide();
+      });
+      $(".content").mouseover(function () {
+        if ($(".play").is(":visible")) {
+          $(".pause").hide();
+        } else {
+          $(".pause").show();
+        }
+      });
+      $(".content").on("ended", function () {
+        $(this).addClass("blurEffect");
+        $(".content").show();
+        $(".pause").hide();
+      });
+    });
+  </script>
+
+  <script></script>
+</html>
