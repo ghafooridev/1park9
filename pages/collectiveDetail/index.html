@@ -29,21 +29,21 @@
           class="imageRandom"
           style="top: 10px; left: 70%; width: 300px; height: 500px"
         >
-          <img src="https://picsum.photos/200" alt="" />
+          <img src="https://www.gstatic.com/webp/gallery2/5.sm.png" alt="" />
           <h1 class="hide">text</h1>
         </span>
         <span
           class="imageRandom"
           style="top: 600px; left: 60%; width: 400px; height: 300px"
         >
-          <img src="https://picsum.photos/300" alt="" />
+          <img src="https://www.gstatic.com/webp/gallery2/2.sm.png" alt="" />
           <h1 class="hide">text</h1>
         </span>
         <span
           class="imageRandom"
           style="top: 1100px; left: 0; width: 500px; height: 200px"
         >
-          <img src="https://picsum.photos/300" alt="" />
+          <img src="https://www.gstatic.com/webp/gallery2/1.sm.png" alt="" />
           <h1 class="hide">text</h1>
         </span>
 
@@ -51,14 +51,14 @@
           class="imageRandom"
           style="top: 950px; left: 60%; width: 400px; height: 300px"
         >
-          <img src="https://picsum.photos/300" alt="" />
+          <img src="https://www.gstatic.com/webp/gallery2/5.sm.png" alt="" />
           <h1 class="hide">text</h1>
         </span>
         <span
           class="imageRandom"
           style="top: 1350px; left: 30%; width: 400px; height: 200px"
         >
-          <img src="https://picsum.photos/300" alt="" />
+          <img src="https://www.gstatic.com/webp/gallery2/5.sm.png" alt="" />
           <h1 class="hide">text</h1>
         </span>
         <img
@@ -94,13 +94,13 @@
     }
 
     const img1 = ` <span class="imageSpan"
-          > <img src="https://picsum.photos/300" alt=""
+          > <img src="https://www.gstatic.com/webp/gallery2/3.sm.png" alt=""
         /> </span> `;
     const img2 = ` <span class="imageSpan"
-          > <img src="https://picsum.photos/300" alt=""
+          > <img src="https://www.gstatic.com/webp/gallery2/2.sm.png" alt=""
         /> </span> `;
     const img3 = ` <span class="imageSpan"
-          > <img src="https://picsum.photos/300" alt=""
+          > <img src="https://www.gstatic.com/webp/gallery2/1.sm.png" alt=""
         /> </span> `;
 
     imagePlace = imagePlace.sort(function (a, b) {
@@ -128,119 +128,8 @@
     $(".imageRandom").click(function () {
       $("#overlay").toggleClass("show");
       $(this).find("img").toggleClass("zoom show");
-      // document.getElementById("overlay").style.display = "block";
-      // if ($(".imageRandom").find(".zoom").length == 0) {
-      //   console.log("fffffffffffff", $(this).find(".zoom").length);
-      //   $(this).find("img").addClass("zoom show");
-      // }
     });
-    // $(".imageRandom")
-    //   .find("img")
-    //   .click(function () {
-    //     $("#overlay").addClass("hide");
-    //     console.log($(".imageRandom").find(".zoom").length);
-    //     if ($(".imageRandom").find(".zoom").length > 0) {
-    //       $(".imageRandom").find("img").removeClass("zoom");
-    //       // var element = document.getElementsByClassName("zoom")[0];
-    //       // element.classList.remove("zoom");
-    //     }
-    //   });
-
-    // function off() {
-    //   document.getElementById("overlay").style.display = "none";
-    // }
-
-    // function getRandomNumber(min, max) {
-    //   return Math.random() * (max - min) + min;
-    // }
-
-    // const images=[`<span class="imageSpan"
-    //         > <img src="https://picsum.photos/201" alt=""
-    //       /> </span>`,`<span class="imageSpan"
-    //         > <img src="https://picsum.photos/201" alt=""
-    //       /> </span>`,`<span class="imageSpan"
-    //         > <img src="https://picsum.photos/201" alt=""
-    //       /> </span>`,`<span class="imageSpan"
-    //         > <img src="https://picsum.photos/201" alt=""
-    //       /> </span>`,`<span class="imageSpan"
-    //         > <img src="https://picsum.photos/201" alt=""
-    //       /> </span>`]
-
-    // const images = [
-    //   "https://picsum.photos/201",
-    //   "https://picsum.photos/202",
-    //   "https://picsum.photos/203",
-    //   "https://picsum.photos/204",
-    //   "https://picsum.photos/205",
-    // ];
-    // // var images=$(".collectiveDescription").find('span')
-
-    // console.log(images);
-    // var winWidth = window.innerWidth;
-    // var winHeight = window.innerHeight;
-
-    // // i stands for "index". you could also call this banana or haircut. it's a variable
-    // for (var i = 0; i < images.length; i++) {
-    //   // shortcut! the current div in the list
-    //   var thisImg = images[i];
-
-    //   const imageBlock = `<span class="imageSpan"
-    //         > <img src="${images[i]}" alt=""
-    //       /> </span>`;
-    //   // get random numbers for each element
-    //   randomTop = getRandomNumber(0, winHeight);
-    //   randomLeft = getRandomNumber(0, winWidth);
-    //   console.log(randomLeft);
-    //   $(imageBlock)
-    //     // .find("span")
-    //     .css({
-    //       border: "1px solid red",
-    //       position: "absolute",
-    //       top: `${randomTop}px`,
-    //       left: `${randomLeft}px`,
-    //     });
-    //   // update top and left position
-    //   // thisImg.style.top = randomTop + "px";
-    //   // thisImg.style.left = randomLeft + "px";
-
-    //   $(imageBlock).appendTo(".collectiveDescription");
-    // }
-
-    // // function that returns a random number between a min and max
-
-    // // images.map(function(item){
-    // //  const imageBlock=`<span class="imageSpan"
-    // //         > <img src="${item}" alt="" style="position:absolute;top:${getRandom()}"
-    // //       /> </span>`
-    // // })
   </script>
-
-  <!-- <script>
-    // collect all the divs
-    var divs = document.getElementsByClassName("imageRandom");
-    // get window width and height
-    var winWidth = 500;
-    var winHeight = 700;
-
-    // i stands for "index". you could also call this banana or haircut. it's a variable
-    for (var i = 0; i < divs.length; i++) {
-      // shortcut! the current div in the list
-      var thisDiv = divs[i];
-
-      // get random numbers for each element
-      randomTop = getRandomNumber(0, winHeight);
-      randomLeft = getRandomNumber(0, winWidth);
-
-      // update top and left position
-      thisDiv.style.top = randomTop + "px";
-      thisDiv.style.left = randomLeft + "px";
-    }
-
-    // function that returns a random number between a min and max
-    function getRandomNumber(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-  </script> -->
 
   <style>
     #overlay {
@@ -287,7 +176,6 @@
       vertical-align: middle;
       margin: 2px;
       padding: 2px;
-      background-color: blue;
     }
     .collectiveDescription {
       position: relative;

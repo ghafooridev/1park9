@@ -73,15 +73,13 @@
     document.querySelector(".content").style.color = "#011627";
 
     $(".tagcloud--item").click(function (e) {
-      console.log("xxxxxxx", $(this).text());
-
       const companyName = e.target.textContent.replaceAll(" ", "");
 
       window.location.href = `../work/${companyName}/index.html`;
     });
-
+    tagCloud.pause();
     $(".tagcloud--item").mouseleave(function () {
-      tagCloud.resume();
+      // tagCloud.resume();
       $(
         `#img-${$(this)
           .text()
@@ -106,7 +104,7 @@
       img.css("z-index", 0);
       img.appendTo($(".tagcloud"));
 
-      tagCloud.pause();
+      // tagCloud.pause();
 
       // }
     });
