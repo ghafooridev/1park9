@@ -8,12 +8,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: #77d099;
-  height: screen;
+  height: 100vh;
   font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
 }
 
 nav {
-  margin: 2.32% 2.6%;
+  margin-left: 2.6%;
+  margin-right: 2.6%;
+  padding-top: 2.32%;
+  padding-bottom: 2.32%;
   display: flex;
   justify-content: space-between;
 }
@@ -54,8 +57,7 @@ nav a:hover {
 
 .main-container {
   width: 94%;
-  margin: 4% 2.6%;
-
+  margin: 1% 2.6%;
   height: 50em;
   display: flex;
   justify-content: space-between;
