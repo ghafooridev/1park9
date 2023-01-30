@@ -1,8 +1,15 @@
+@font-face {
+  font-family: GT-Zirkon;
+  src: url("../../assets/font-family//GT-Zirkon-Regular.woff2") format("woff2"),
+    url("../../assets/font-family//GT-Zirkon-Regular.woff2") format("woff2");
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #77d099;
   height: screen;
+  font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -19,7 +26,6 @@ nav img {
 .nav-links {
   width: 312px;
 
-  font-family: "GT Zirkon Trial";
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
@@ -33,11 +39,10 @@ nav img {
   text-decoration: none;
   color: #d2e823;
 
-  font-family: "GT Zirkon Trial";
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
-  line-height: 25px;
+  line-height: 25.48px;
   text-align: right;
 }
 
