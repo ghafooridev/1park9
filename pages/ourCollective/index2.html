@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery awesomeCloud Plugin Demos</title>
+    <meta name="description" content="A Word Cloud plugin for jQuery." />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="../../assets/js/jquery.awesomeCloud-0.2.js"></script>
+    <style type="text/css">
+      .wordcloud {
+        height: 500px;
+        margin: 0.5in auto;
+        padding: 0;
+        page-break-after: always;
+        page-break-inside: avoid;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wordcloud1" class="wordcloud">
+      <span class="cloudItem" data-weight="9">quisqu</span
+      ><span data-weight="27">egesta</span><span data-weight="38">puru</span
+      ><span data-weight="43">risu</span><span data-weight="20">ultrici</span
+      ><span data-weight="19">sodal</span><span data-weight="26">matti</span
+      ><span data-weight="31">ornar</span><span data-weight="16">dignissim</span
+      ><span data-weight="27">lacu</span><span data-weight="18">ultric</span
+      ><span data-weight="16">elementum</span
+      ><span data-weight="31">lacinia</span><span data-weight="65">amet</span
+      ><span data-weight="37">nisl</span><span data-weight="35">tincidunt</span
+      ><span data-weight="30">magna</span><span data-weight="40">lorem</span
+      ><span data-weight="29">auctor</span><span data-weight="20">viverra</span
+      ><span data-weight="19">fermentum</span>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#wordcloud1").awesomeCloud({
+          size: {
+            grid: 50,
+            factor: 5,
+          },
+          color: {
+            background: "rgba(255,255,255,0)", // background color, transparent by default
+            start: "#000", // color of the smallest font, if options.color = "gradient""
+            end: "#000", // color of the largest font, if options.color = "gradient"
+          },
+          options: {
+            rotationRatio: 0.35,
+            printMultiplier: 1,
+            sort: "random",
+          },
+          font: "'Times New Roman', Times, serif",
+          shape: "square",
+        });
+      });
+    </script>
+    <script>
+      $(".cloudItem").click(function (e) {
+        console.log("f");
+        const companyName = e.target.textContent.replaceAll(" ", "");
+
+        window.location.href = `../collectiveDetail/index.html`;
+      });
+    </script>
+  </body>
+</html>
