@@ -3,7 +3,11 @@ body {
   margin-bottom: 100px;
   padding: 0;
   background-color: #011627;
+
+  font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
+
   overflow-y: hidden;
+
 }
 
 body a {
@@ -25,7 +29,6 @@ nav img {
 .nav-links {
   width: 312px;
 
-  font-family: "GT Zirkon Trial";
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
@@ -39,7 +42,6 @@ nav img {
   text-decoration: none;
   color: #d2e823;
 
-  font-family: "GT Zirkon Trial";
   font-style: normal;
   font-weight: 400;
   font-size: 23px;

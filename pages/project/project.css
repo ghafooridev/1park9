@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #d2e823;
+  font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -20,7 +21,6 @@ nav img {
 .nav-links {
   width: 312px;
 
-  font-family: "GT Zirkon Trial";
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
@@ -34,7 +34,6 @@ nav img {
   text-decoration: none;
   color: #011627;
 
-  font-family: "GT Zirkon Trial";
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
@@ -49,12 +48,9 @@ nav a:hover {
 }
 
 .tagcloud {
-  font-family: "Poppins", sans-serif;
   font-size: 90px;
   margin: auto;
   width: 100% !important;
-
-  font-family: "GT Zirkon Trial";
 }
 .tagcloud--item:hover {
   color: #77d099;
