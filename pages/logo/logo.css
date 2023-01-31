@@ -86,7 +86,7 @@ nav a:hover {
   text-align: center;
   mix-blend-mode: screen;
   background-color: #77d099;
-  /* background-color: #ffff; */
+  /* /_ background-color: #ffff; _/ */
 }
 
 .color_back_first {
@@ -131,7 +131,7 @@ nav a:hover {
 }
 
 .img-9 {
-  /* height: 25em; */
+  /* height: 25em;  */
   height: 79%;
   width: 17%;
 }
@@ -139,4 +139,21 @@ nav a:hover {
 .img-1 {
   height: 79%;
   width: 13.2%;
+}
+#slideshow {
+  position: relative;
+
+  width: 94%;
+  margin: 2% 2.6%;
+  height: 75%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /* transition: opacity 0.25s;  */
 }
