@@ -98,5 +98,19 @@
         // tagCloud.pause();
       }
     });
+
+    $(".tagcloud").css("height", "auto");
+
+    $(document).ready(function () {
+      // Check if body height is higher than window height :)
+      const element = $(".tagcloud--item");
+      while (
+        $("html").height() > $(window).height() &&
+        parseInt(element.css("fontSize")) > 0
+      ) {
+        const newSize = parseInt(element.css("fontSize")) - 2;
+        element.css("fontSize", `${newSize}px`);
+      }
+    });
   </script>
 </html>

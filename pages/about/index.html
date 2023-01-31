@@ -29,5 +29,18 @@
         agencies, production partners and brands.
       </p>
     </main>
+    <script>
+      $(document).ready(function () {
+        // Check if body height is higher than window height :)
+        const element = $("main p");
+        while (
+          $("html").height() > $(window).height() &&
+          parseInt(element.css("fontSize")) > 0
+        ) {
+          const newSize = parseInt(element.css("fontSize")) - 2;
+          element.css("fontSize", `${newSize}px`);
+        }
+      });
+    </script>
   </body>
 </html>
