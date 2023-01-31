@@ -88,8 +88,8 @@
     </div>
   </body>
   <script>
-    const text = `Matt Ellis is a New York based
-             street photographer with a passion for documenting people and their intimate stories.`.trim();
+    const text = ` Matt Ellis is a New York based
+             street photographer with a passion for documenting people and their intimate stories. `.trim();
 
     const indexes2 = [];
     var imagePlace = [];
@@ -111,18 +111,16 @@
     const img2 = ` <span class="imageSpan"
           > <img src="https://www.gstatic.com/webp/gallery2/2.sm.png" alt=""
         /> </span> `;
-    const img3 = ` <span class="imageSpan"
-          > <img src="https://www.gstatic.com/webp/gallery2/1.sm.png" alt=""
-        /> </span> `;
 
     imagePlace = imagePlace.sort(function (a, b) {
       return a - b;
     });
+
     const first = text.substring(0, imagePlace[0]);
     const second = text.substring(imagePlace[0] + 1, imagePlace[1]);
     const third = text.substring(imagePlace[1] + 1, imagePlace[2]);
     const forth = text.substring(imagePlace[2] + 1, text.length);
-    const finalText = first + img1 + second + img2 + third + img3 + forth;
+    const finalText = img1 + text + img2;
 
     $(".collectiveDetailContent").html("");
     $(".collectiveDetailContent").append(finalText);
