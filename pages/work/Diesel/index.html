@@ -30,7 +30,7 @@
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-            <div class="card">
+            <div class="card first-card">
               <p>Puma Hoops</p>
               <h4>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a
@@ -42,13 +42,13 @@
           </li>
 
           <li class="splide__slide">
-            <img src="https://picsum.photos/201" style="width: 100%" alt="" />
+            <img src="https://dummyimage.com/300.png/09f/fff" alt="" />
           </li>
           <li class="splide__slide">
-            <img src="https://picsum.photos/200" style="width: 100%" alt="" />
+            <img src="https://dummyimage.com/300.png/09f/fff" alt="" />
           </li>
           <li class="splide__slide">
-            <img src="https://picsum.photos/202" style="width: 100%" alt="" />
+            <img src="../../../assets/img/test.jpg" alt="" />
           </li>
           <li class="splide__slide">
             <div class="wrapper">
@@ -72,7 +72,7 @@
             </div>
           </li>
           <li class="splide__slide">
-            <img src="https://picsum.photos/202" alt="" />
+            <img src="https://dummyimage.com/300.png/09f/fff" alt="" />
           </li>
           <li class="splide__slide">
             <div class="card last-card">
@@ -155,22 +155,35 @@
       </div>
     </section>
   </body>
+  <script src="../../../assets/js/autoplay.js"></script>
   <script>
     const splide = new Splide(".splide", {
       rewind: false,
       perPage: 1,
       autoplay: false,
       wheel: true,
-      padding: "160px",
-      width: "80%",
+      // padding: "160px",
       focus: 0,
       omitEnd: true,
       wheelSleep: 250,
+      // autoScroll: {
+      //   speed: 1,
+      // },
     });
     splide.on("moved", function () {
       $(".pause").click();
     });
     splide.mount();
+
+    $("body").keydown(function (e) {
+      if (e.keyCode == 37) {
+        // left
+        splide.go(splide.index - 1);
+      } else if (e.keyCode == 39) {
+        // right
+        splide.go(splide.index + 1);
+      }
+    });
   </script>
   <script>
     $(document).ready(function () {
