@@ -7,7 +7,6 @@ body {
   font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
 
   overflow-y: hidden;
-
 }
 
 body a {
@@ -225,6 +224,10 @@ li {
   justify-content: space-between;
 }
 
+.splide__pagination {
+  display: none;
+}
+
 @media (width<400px) {
   .splide__slide img,
   .splide__slide .wrapper,
@@ -251,8 +254,5 @@ li {
   }
   .last-card {
     padding: 0;
-  }
-  .splide__pagination {
-    display: none;
   }
 }
