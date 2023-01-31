@@ -51,4 +51,19 @@
       setTimeout(showSlides, 750); // Change image every 0.75 second
     }
   </script>
+  <script>
+    const plus = document.querySelector(".nav-plus");
+    const menuToggle = document.querySelector(".nav-plus p");
+
+    plus.addEventListener("click", openMenu);
+
+    function openMenu() {
+      if (menuToggle.textContent === "+") {
+        menuToggle.textContent = "x";
+        // menuToggle.classList.add("rotate");
+      } else {
+        menuToggle.textContent = "+";
+      }
+    }
+  </script>
 </html>

@@ -162,6 +162,17 @@ nav a:hover {
   /* transition: opacity 0.25s;  */
 }
 
+.rotate {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+.rotate-back {
+  transform: rotateY(0deg) rotate(-45deg);
+}
+
+/* Mobile version start */
+
 @media (max-width: 600px) {
   #slideshow {
     position: relative;
