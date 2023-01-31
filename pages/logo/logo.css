@@ -55,6 +55,10 @@ nav a:hover {
   scale: 0.98;
 }
 
+.nav-plus {
+  display: none;
+}
+
 .main-container {
   width: 94%;
   margin: 0.3% 2.6%;
@@ -156,4 +160,36 @@ nav a:hover {
   height: 100%;
   opacity: 0;
   /* transition: opacity 0.25s;  */
+}
+
+@media (max-width: 600px) {
+  #slideshow {
+    position: relative;
+    transform: rotateY(0deg) rotate(-90deg);
+    height: 28.75%;
+    width: 200%;
+    /* margin-top: 75%;
+    margin-left: -50%; */
+
+    margin: 75% 50% 0 -50%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-plus {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .nav-plus p {
+    color: #d2e823;
+    font-size: 50px;
+    font-weight: 100;
+    margin: 0;
+    line-height: 75%;
+  }
 }
