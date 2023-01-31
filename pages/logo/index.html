@@ -18,6 +18,10 @@
         <a href="../ourCollective/index.html">Our Collective</a>
         <a href="../about/index.html">About</a>
       </div>
+
+      <span class="nav-plus">
+        <p>+</p>
+      </span>
     </nav>
 
     <section id="slideshow">
@@ -30,12 +34,12 @@
   </body>
 
   <script>
-    var slideIndex = 0;
+    let slideIndex = 0;
     showSlides();
 
     function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("slide");
+      let i;
+      let slides = document.getElementsByClassName("slide");
       for (i = 0; i < slides.length; i++) {
         slides[i].style.opacity = 0;
       }
