@@ -42,7 +42,7 @@
           </li>
 
           <li class="splide__slide">
-            <img src="https://dummyimage.com/300.png/09f/fff" alt="" />
+            <img src="../../../assets/img/vertical.jpg" alt="" />
           </li>
           <li class="splide__slide">
             <img src="https://dummyimage.com/300.png/09f/fff" alt="" />
@@ -72,7 +72,7 @@
             </div>
           </li>
           <li class="splide__slide">
-            <img src="https://dummyimage.com/300.png/09f/fff" alt="" />
+            <img src="../../../assets/img/horizontal.jpg" alt="" />
           </li>
           <li class="splide__slide">
             <div class="card last-card">
@@ -157,15 +157,25 @@
   </body>
   <script src="../../../assets/js/autoplay.js"></script>
   <script>
+    const breakPoint = 400;
+    function isMobile() {
+      var windowsize = $(window).width();
+      return windowsize < breakPoint;
+    }
+
     const splide = new Splide(".splide", {
       rewind: false,
-      perPage: 1,
+      // perPage: 1,
       autoplay: false,
       wheel: true,
       // padding: "160px",
+      // perPage: 3,
+      perMove: 1,
       focus: 0,
       omitEnd: true,
-      wheelSleep: 250,
+      direction: isMobile() && "ttb",
+      height: "600px",
+      // wheelSleep: 250,
       // autoScroll: {
       //   speed: 1,
       // },
