@@ -48,18 +48,17 @@ nav a:hover {
 }
 
 main {
-  height: 1361px;
-  min-height: 100%;
-
+  height: fit-content;
   width: 80%;
   margin-left: 2.6%;
+  margin-top: 5%;
 }
 
 .about-p {
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
-  line-height: 120%;
+  line-height: 96px;
 
   color: #77d099;
 }
