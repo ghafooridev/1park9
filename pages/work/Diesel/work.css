@@ -3,6 +3,7 @@ body {
   margin-bottom: 100px;
   padding: 0;
   background-color: #011627;
+  overflow-y: hidden;
 }
 
 body a {
@@ -109,11 +110,15 @@ nav a:hover {
 }
 
 .last-card {
+  width: 100% !important;
   padding: 0 45px;
   background: #011627;
   color: #77d099;
   display: flex;
   justify-content: space-between;
+}
+.first-card {
+  margin-left: 145px !important;
 }
 
 .last-card-left {
@@ -136,13 +141,15 @@ nav a:hover {
 .splide__slide {
   background-color: #011627;
   display: flex;
-  padding: 100px 30px;
+  /* padding: 0px 30px; */
   padding-bottom: 0;
+  justify-content: center;
 }
 .splide__slide img,
 .splide__slide .wrapper,
 .splide__slide .card {
   width: 100%;
+  margin: 0 45px;
   border-radius: 10px;
 }
 
@@ -165,11 +172,11 @@ video {
 }
 
 .splide__arrow--next {
-  margin-right: 140px;
+  /* margin-right: 140px; */
 }
 
 .splide__arrow--prev {
-  margin-left: 140px;
+  /* margin-left: 140px; */
 }
 
 li {
