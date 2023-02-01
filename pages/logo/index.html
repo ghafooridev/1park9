@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./logo.css" />
     <title>logo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -21,6 +25,12 @@
 
       <span class="nav-plus">
         <p>+</p>
+        <img
+          src="../../assets/mobile-menu/Menu.png"
+          alt="X"
+          width="100px"
+          height="100px"
+        />
       </span>
     </nav>
 
@@ -30,6 +40,53 @@
       <img src="../../assets/gif/Group 1811.png" class="slide" />
       <img src="../../assets/gif/Group 1812.png" class="slide" />
       <img src="../../assets/gif/Group 1813.png" class="slide" />
+    </section>
+
+    <section id="mobile-menu">
+      <div class="mobile-menu-container">
+        <div class="menu-top">
+          <a href="../project/index.html">Work</a>
+          <a href="../ourCollective/index.html">Our Collective</a>
+          <a href="../about/index.html">About</a>
+        </div>
+
+        <div class="menu-bottom">
+          <div>
+            <img
+              src="../../assets/mobile-menu/Group 1791.png"
+              alt="company_logo_bottom"
+            />
+          </div>
+
+          <div class="menu-bottom-text">
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 10px;
+              "
+            >
+              <h2>Follow</h2>
+              <a href="#">Instagram</a>
+              <a href="#">Vimeo</a>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 10px;
+              "
+            >
+              <h2>Contact</h2>
+              <a href="#">Hello@1Park9.com</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 
@@ -49,6 +106,40 @@
       }
       slides[slideIndex - 1].style.opacity = 1;
       setTimeout(showSlides, 750); // Change image every 0.75 second
+    }
+  </script>
+  <script>
+    const plus = document.querySelector(".nav-plus");
+    const menuToggle = document.querySelector(".nav-plus p");
+    const gifContent = document.querySelector("#slideshow");
+    const closeIcon = document.querySelector(".nav-plus img");
+    const navImg = document.querySelector("nav img");
+    const body = document.querySelector("body");
+    const mobileMenu = document.querySelector("#mobile-menu");
+
+    plus.addEventListener("click", handleMenuClick);
+
+    let isOpen = false;
+
+    function handleMenuClick() {
+      if (!isOpen) {
+        menuToggle.style.display = "none";
+        closeIcon.style.display = "block";
+        gifContent.style.display = "none";
+        body.style.backgroundColor = "#011627";
+        navImg.style.display = "none";
+        mobileMenu.style.display = "flex";
+        isOpen = true;
+      } else {
+        closeIcon.style.display = "none";
+        menuToggle.style.display = "block";
+        closeIcon.style.display = "none";
+        gifContent.style.display = "block";
+        body.style.backgroundColor = "#77d099";
+        navImg.style.display = "block";
+        mobileMenu.style.display = "none";
+        isOpen = false;
+      }
     }
   </script>
 </html>

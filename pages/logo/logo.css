@@ -1,7 +1,9 @@
 @font-face {
-  font-family: GT-Zirkon;
-  src: url("../../assets/font-family//GT-Zirkon-Regular.woff2") format("woff2"),
-    url("../../assets/font-family//GT-Zirkon-Regular.woff2") format("woff2");
+  font-family: "GT-Zirkon-Regular-Trial";
+  src: url("../../assets/font-family/GT-Zirkon-Regular-Trial.otf")
+      format("opentype"),
+    url("../../assets/font-family/GT-Zirkon-Regular-Trial.otf")
+      format("opentype");
 }
 
 body {
@@ -9,7 +11,6 @@ body {
   padding: 0;
   background-color: #77d099;
   height: 100vh;
-  font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -48,6 +49,7 @@ nav img {
   font-size: 23px;
   line-height: 25.48px;
   text-align: right;
+  font-family: "GT-Zirkon-Regular-Trial";
 }
 
 nav a:hover {
@@ -163,16 +165,40 @@ nav a:hover {
   /* transition: opacity 0.25s;  */
 }
 
-@media (max-width: 600px) {
+.rotate {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+.rotate-back {
+  transform: rotateY(0deg) rotate(-45deg);
+}
+
+#mobile-menu {
+  display: none;
+}
+
+.mobile-menu-container {
+  display: none;
+}
+
+/* Mobile version start */
+
+@media (max-width: 425px) {
   #slideshow {
     position: relative;
     transform: rotateY(0deg) rotate(-90deg);
     height: 28.75%;
-    width: 200%;
-    /* margin-top: 75%;
-    margin-left: -50%; */
+    width: 175%;
+    margin: 67.5% 5% 25% -37.5%;
+  }
 
-    margin: 75% 50% 0 -50%;
+  nav {
+    margin: 5% 7% 0 7%;
+  }
+  nav a {
+    display: flex;
+    align-items: center;
   }
 
   .nav-links {
@@ -191,10 +217,83 @@ nav a:hover {
   }
 
   .nav-plus p {
-    color: #d2e823;
-    font-size: 50px;
-    font-weight: 100;
     margin: 0;
     line-height: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d2e823;
+    font-size: 75px;
+  }
+
+  .nav-plus img {
+    height: auto;
+    width: auto;
+    display: none;
+  }
+
+  /* Menu open */
+
+  #mobile-menu {
+    display: none;
+    height: 77.5%;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    font-family: "GT-Zirkon-Regular-Trial";
+    margin-top: 10%;
+  }
+
+  .mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+  }
+  .menu-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20%;
+  }
+
+  .menu-top a {
+    text-decoration: none;
+    color: #d2e823;
+    font-size: 35px;
+    line-height: 30px;
+    font-family: "GT-Zirkon-Regular-Trial";
+  }
+
+  .menu-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-bottom-text {
+    width: 90%;
+    height: 37.5%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-top: 5%;
+    color: #77d099;
+  }
+
+  .menu-bottom-text h2 {
+    color: #d2e823;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-bottom-text a {
+    text-decoration: none;
+    color: #77d099;
+    font-size: 18px;
+  }
+
+  .menu-bottom img {
+    width: 100%;
+    height: auto;
   }
 }
