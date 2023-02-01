@@ -1,7 +1,9 @@
 @font-face {
-  font-family: GT-Zirkon;
-  src: url("../../assets/font-family//GT-Zirkon-Regular.woff2") format("woff2"),
-    url("../../assets/font-family//GT-Zirkon-Regular.woff2") format("woff2");
+  font-family: "GT-Zirkon-Regular-Trial";
+  src: url("../../assets/font-family/GT-Zirkon-Regular-Trial.otf")
+      format("opentype"),
+    url("../../assets/font-family/GT-Zirkon-Regular-Trial.otf")
+      format("opentype");
 }
 
 body {
@@ -9,7 +11,6 @@ body {
   padding: 0;
   background-color: #77d099;
   height: 100vh;
-  font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -47,6 +48,7 @@ nav img {
   font-size: 23px;
   line-height: 25.48px;
   text-align: right;
+  font-family: "GT-Zirkon-Regular-Trial";
 }
 
 nav a:hover {

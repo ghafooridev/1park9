@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
+@font-face {
+  font-family: "GT-Zirkon-Regular-Trial";
+  src: url("../../assets/font-family/GT-Zirkon-Regular-Trial.otf")
+      format("opentype"),
+    url("../../assets/font-family/GT-Zirkon-Regular-Trial.otf")
+      format("opentype");
+}
 body {
   margin: 0;
   padding: 0;
   background-color: #d2e823;
-  font-family: "GT-Zirkon-Regular", Helvetica, Arial, sans-serif;
+  font-family: "GT-Zirkon-Regular-Trial";
 }
 
 nav {
